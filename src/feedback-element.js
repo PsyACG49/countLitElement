@@ -18,6 +18,12 @@ export class FeedbackElement extends LitElement {
     }
 
     render() {
+        // console.log(typeof this.msg)
+        // console.log(this.msg.msg)
+        // ${this.msg.msg}
+        // ${this.msg? 
+        //     html`${this.msg.msg}` : 
+        //     html` `}
         return html`
             <style>
                 div{
@@ -29,7 +35,7 @@ export class FeedbackElement extends LitElement {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: red;
+                    background-color: #1CACF4;
                     color: white;
                     width: 100%;
                     transition: all 0.7s ease-in;
@@ -42,10 +48,13 @@ export class FeedbackElement extends LitElement {
                 }
             </style>
             <div class="${this.abierto ? 'abierto' : ''}">
-                ${this.msg.msg}
+                ${this.msg? 
+                html`${this.msg.msg}` : 
+                html` `}
             </div>
         `;
     }
+
 
 }
 customElements.define('feedback-element', FeedbackElement);
