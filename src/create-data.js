@@ -1,7 +1,9 @@
 import { LitElement, html } from 'lit-element';
-
+//Data manager
+//token sesion
+//chai assertion library
 export class CreateData extends LitElement {
-
+    
     static get properties(){
         return{
             url: {type:String},
@@ -9,10 +11,10 @@ export class CreateData extends LitElement {
         }
     }
 
-    constructor(){
+    constructor(url, options){
         super()
-        this.url = '';
-        this.options = {}
+        this.url = url;
+        this.options = options;
     }
 
     generateRequest(){

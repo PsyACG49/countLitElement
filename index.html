@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="./src/assets/stylos.css">
+    <title>LitElement</title>
 </head>
 <body>
     <h1>Primeros pasos con LitElement</h1>
@@ -13,7 +15,10 @@
     <mi-contador></mi-contador>
     <feedback-element msg='Este es mi mensaje'></feedback-element>
     <list-dragons></list-dragons>
-    <form-in></form-in>
+    <form-in classButton="error" inputs='[{
+        "placeholder": "Escribe tu nombre",
+        "type": "text"
+    }]'></form-in>
     <script src="./src/index.js" type="module"></script>
 </body>
 </html>
